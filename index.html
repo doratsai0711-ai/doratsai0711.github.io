@@ -6,44 +6,156 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>我的個人網站</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f0f4ff;
-      color: #243047;
-      text-align: center;
-      padding: 60px 20px;
+    * {
+      box-sizing: border-box;
     }
 
-    .card {
-      max-width: 500px;
+    body {
+      margin: 0;
+      font-family: Arial, "Microsoft JhengHei", sans-serif;
+      background: #0f172a;
+      color: #f8fafc;
+      line-height: 1.8;
+    }
+
+    header {
+      padding: 24px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #334155;
+    }
+
+    header strong {
+      color: #a5b4fc;
+      font-size: 20px;
+    }
+
+    nav a {
+      color: #cbd5e1;
+      text-decoration: none;
+      margin-left: 18px;
+    }
+
+    main {
+      max-width: 900px;
       margin: auto;
-      padding: 35px;
-      background: white;
-      border-radius: 20px;
-      box-shadow: 0 8px 25px #00000010;
+      padding: 75px 24px;
+    }
+
+    .hero {
+      padding: 35px 0 60px;
+    }
+
+    .tag {
+      color: #a5b4fc;
+      letter-spacing: 2px;
     }
 
     h1 {
-      color: #4f46e5;
+      font-size: clamp(38px, 7vw, 64px);
+      line-height: 1.2;
+      margin: 18px 0;
     }
 
-    a {
+    .intro {
+      color: #cbd5e1;
+      font-size: 18px;
+      max-width: 600px;
+    }
+
+    .button {
       display: inline-block;
-      margin-top: 15px;
-      padding: 12px 22px;
-      background: #4f46e5;
-      color: white;
-      text-decoration: none;
+      background: #818cf8;
+      color: #0f172a;
+      padding: 12px 24px;
+      margin-top: 18px;
       border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    h2 {
+      margin-top: 30px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    .card {
+      padding: 24px;
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 16px;
+    }
+
+    .card p {
+      color: #cbd5e1;
+    }
+
+    footer {
+      text-align: center;
+      padding: 28px;
+      color: #94a3b8;
+      border-top: 1px solid #334155;
     }
   </style>
 </head>
 <body>
-  <div class="card">
-    <h1>你好，世界！</h1>
-    <p>歡迎來到我的第一個個人網站。</p>
-    <p>我正在學習 HTML 和 GitHub。</p>
-    <a href="https://github.com/">認識 GitHub</a>
-  </div>
+  <header>
+    <strong>MY SPACE.</strong>
+    <nav>
+      <a href="#about">關於我</a>
+      <a href="#projects">我的作品</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="tag">HELLO, WORLD!</div>
+      <h1>你好，我正在<br>打造自己的網路世界。</h1>
+      <p class="intro">
+        歡迎來到我的個人網站！
+        我正在學習網站設計、HTML、CSS 和 GitHub，
+        並一步一步把想法變成真實的作品。
+      </p>
+      <a class="button" href="#projects">看看我的作品 ↓</a>
+    </section>
+
+    <section id="about">
+      <h2>關於我</h2>
+      <p class="intro">
+        我是一位正在探索網頁開發的新手。
+        這個網站是我的第一個專案，
+        未來我會持續學習並分享自己的成果。
+      </p>
+    </section>
+
+    <section id="projects">
+      <h2>我的作品</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>🌐 個人網站</h3>
+          <p>使用 HTML、CSS 和 GitHub Pages 建立的第一個網站。</p>
+        </article>
+        <article class="card">
+          <h3>💡 學習筆記</h3>
+          <p>記錄我學習程式、設計和新工具的過程。</p>
+        </article>
+        <article class="card">
+          <h3>🚀 未來計畫</h3>
+          <p>持續製作新作品，讓這個網站變得更完整。</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 我的個人網站 · 持續學習中
+  </footer>
 </body>
 </html>
